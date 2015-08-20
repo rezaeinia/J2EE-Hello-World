@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-web-app>
+	<context-root>test</context-root>
+	<container-descriptor>
+		<prefer-application-packages>
+			<!-- jersey-bundle-*.jar -->
+			<package-name>com.sun.jersey.*</package-name>
+			<package-name>com.sun.research.ws.wadl.*</package-name>
+			<package-name>com.sun.ws.rs.ext.*</package-name>
+
+			<!-- Jackson-*.jar -->
+			<package-name>org.codehaus.jackson.*</package-name>
+
+			<!-- jettison-*.jar -->
+			<package-name>org.codehaus.jettison.*</package-name>
+
+			<!-- jsr311*.jar -->
+			<package-name>javax.ws.rs.*</package-name>
+
+			<!-- asm.jar -->
+			<package-name>org.objectweb.asm.*</package-name>
+		</prefer-application-packages>
+	</container-descriptor>
+</weblogic-web-app>
