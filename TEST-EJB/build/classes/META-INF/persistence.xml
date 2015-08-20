@@ -5,8 +5,7 @@
 	<persistence-unit name="ATS-EJB">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<jta-data-source>ATS_DB_QUERY</jta-data-source>
-		<class>com.ap.entity.ChargeRequestEntity</class>
-		<class>com.ap.entity.product.Product</class>
+		<class>com.arnia.entity.product.Product</class>
 		<properties>
 			<property name="eclipselink.target-server" value="WebLogic_12" />
 			<property name="javax.persistence.jtaDataSource" value="ATCS_DATA_SOURCE" />

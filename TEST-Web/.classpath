@@ -37,5 +37,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="D:/java/Libraries/websocket-client-9.3.2.v20150730.jar"/>
+	<classpathentry kind="lib" path="D:/work/workspace/J2EE-Hello-World/lib/webservices-api.jar"/>
 	<classpathentry kind="output" path="build"/>
 </classpath>

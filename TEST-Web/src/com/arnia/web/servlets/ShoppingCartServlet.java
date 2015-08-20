@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.ap.biz.CartLocal;
-import com.ap.entity.product.Product;
+import com.arnia.biz.CartLocal;
+import com.arnia.entity.product.Product;
 
 
 
@@ -44,7 +44,7 @@ public class ShoppingCartServlet extends HttpServlet {
 		      try {
 		        InitialContext ic = new InitialContext();
 		        cartBean = (CartLocal) 
-		         ic.lookup("java:global/StatefulEJBEAR/StatefulSessionBeansEJB/CartBean!com.ap.biz.CartLocal"); 
+		         ic.lookup("java:global/StatefulEJBEAR/StatefulSessionBeansEJB/CartBean!com.arnia.biz.CartLocal"); 
 		        
 		        request.getSession().setAttribute(CART_SESSION_KEY, cartBean);
 		        

@@ -3,9 +3,9 @@ package com.arnia.web.service.rest;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-import com.ap.biz.SingletonRemote;
-import com.ap.biz.StatefullRemote;
-import com.ap.biz.StatelessRemote;
+import com.arnia.biz.SingletonRemote;
+import com.arnia.biz.StatefullRemote;
+import com.arnia.biz.StatelessRemote;
 
 public class Accessor {
 	// private static ChargeRequestRemote chargeRequestBean;
@@ -18,7 +18,7 @@ public class Accessor {
 
 			StatelessRemote statelessRemote;
 			 statelessRemote= (StatelessRemote) getContext().lookup(
-					"STATELESS-SESSION-BEAN#com.ap.biz.StatelessRemote");
+					"STATELESS-SESSION-BEAN#com.arnia.biz.StatelessRemote");
 			return statelessRemote;
 
 		} catch (NamingException e) {
@@ -33,7 +33,7 @@ public class Accessor {
 
 			StatefullRemote stateFullRemote;
 			stateFullRemote = (StatefullRemote) getContext().lookup(
-					"STATEFULL-SESSION-BEAN#com.ap.biz.StateFullRemote");
+					"STATEFULL-SESSION-BEAN#com.arnia.biz.StateFullRemote");
 			return stateFullRemote;
 
 		} catch (NamingException e) {
@@ -47,7 +47,7 @@ public class Accessor {
 
 			SingletonRemote serviceBean;
 			serviceBean = (SingletonRemote) getContext().lookup(
-					"SINGLETON-SESSION-BEAN#com.ap.biz.SingletonRemote");
+					"SINGLETON-SESSION-BEAN#com.arnia.biz.SingletonRemote");
 			return serviceBean;
 
 		} catch (NamingException e) {

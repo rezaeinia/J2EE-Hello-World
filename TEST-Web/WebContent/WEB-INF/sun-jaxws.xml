@@ -5,7 +5,7 @@
 	<!-- <endpoint name="HelloWorld" implementation="com.mkyong.ws.HelloWorldImpl"
 		url-pattern="/hw" /> -->
 
-	<endpoint name="AirTimeService" implementation="com.ap.ws.AirTimeServiceImpl"
+	<endpoint name="AirTimeService" implementation="com.arnia.ws.AirTimeServiceImpl"
 		url-pattern="/services" />
 
 </endpoints>
