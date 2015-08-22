@@ -5,4 +5,18 @@ if you want participate in this project for new technology please clone this res
 the project now contains following Hello World Examples: 
 1-SOAP Web Service (Annotation based with : @WebService)
 2-RESTFULL Web Service
-3-
+3-WebSocket 
+
+/* JSP/Servlet Hello World Guide */
+URL : http://localhost:7001/test/jsp/index.jsp
+java classes: 
+com.arnia.web.servlets.DefaultServlet
+com.arnia.web.servlets.DefaultServletWithAnnotation
+Config file : 
+web.xml > go to this section  : <!--  Default Web Servlet - begin -->
+
+http://localhost:7001/test/jsp/index.jsp
+/* WebSocket Hello World Guide */
+URL :http://localhost:7001/test/websocket/chat.html
+java Class  : com.arnia.web.websocket.ChatServer
+

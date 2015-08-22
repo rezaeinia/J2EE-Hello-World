@@ -19,19 +19,17 @@ public class DefaultServlet extends HttpServlet {
 	public DefaultServlet() {
 	}
 
-	String globalVariable ="default user";
+	String globalVariable = "Guest";
 
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		try {
-
 			PrintWriter out = response.getWriter();
-			out.println(globalVariable);
+			out.println("<H1>JSP/Servlet Example</H1><BR>");
+			out.println("Hello " + globalVariable);
 			out.flush();
 			out.close();
-
 		} catch (Exception e) {
-
 			PrintWriter out = response.getWriter();
 			out.println("Error");
 			out.flush();
@@ -42,7 +40,9 @@ public class DefaultServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		globalVariable = request.getParameter("userName");
+		String userName = request.getParameter("userName");
+		if (userName != null && !userName.isEmpty())
+			globalVariable = userName;
 		doGet(request, response);
 	}
 }

@@ -3,12 +3,12 @@
 	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	version="3.0">
-	<display-name>ATCS</display-name>
+	<display-name>J2EE-Hello-World</display-name>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
-	<!--  Default Web Servlet -->
+	<!--  Default Web Servlet - begin -->
 	<servlet>
 		<servlet-name>DefaultServlet</servlet-name>
 		<servlet-class>com.arnia.web.servlets.DefaultServlet</servlet-class>
@@ -17,6 +17,7 @@
 		<servlet-name>DefaultServlet</servlet-name>
 		<url-pattern>jsp/default-servlet</url-pattern>
 	</servlet-mapping>
+	<!-- Default Web Servlet - end  -->
 	<!-- REST Config - begin -->
 	<servlet>
 		<servlet-name>Jersey</servlet-name>
