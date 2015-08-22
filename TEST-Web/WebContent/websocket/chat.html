@@ -24,7 +24,7 @@
             }
         </style>
         <script>
-            var chatClient = new WebSocket("ws://localhost:7001/test/chat");
+            var chatClient = new WebSocket("ws://localhost:7001/test/websocket/chat");
             
             chatClient.onmessage = function(evt) {
                 var p = document.createElement("p");

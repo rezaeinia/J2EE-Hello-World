@@ -10,7 +10,7 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
-@ServerEndpoint("test/chat")
+@ServerEndpoint("/websocket/chat")
 public class ChatServer {
     
     private static final Logger LOGGER = 
@@ -26,7 +26,7 @@ public class ChatServer {
     public String onMessage(String message, Session session) {
         LOGGER.log(Level.INFO, "New message from Client [{0}]: {1}", 
                 new Object[] {session.getId(), message});
-        return "Server received [" + message + "]";
+        return "WebSocket Hello World, you Send me : [" + message + "]";
     }
     
     @OnClose
