@@ -8,12 +8,9 @@ import com.arnia.biz.StatefullRemote;
 import com.arnia.biz.StatelessRemote;
 
 public class Accessor {
-	// private static ChargeRequestRemote chargeRequestBean;
 	private static InitialContext context;
 
 	public static StatelessRemote getStatelessBean() {
-		// if (chargeRequestBean != null)
-		// return chargeRequestBean;
 		try {
 
 			StatelessRemote statelessRemote;

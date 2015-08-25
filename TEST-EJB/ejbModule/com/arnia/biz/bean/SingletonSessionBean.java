@@ -1,7 +1,14 @@
 package com.arnia.biz.bean;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
+import javax.ejb.Schedule;
 import javax.ejb.Singleton;
+import javax.ejb.Timeout;
+import javax.ejb.Timer;
+import javax.ejb.TimerService;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -15,7 +22,7 @@ public class SingletonSessionBean implements SingletonRemote {
 
 	@PostConstruct
 	private void init() {
-
+		timerService.createTimer(5000, "Created new programmatic timer");
 	}
 
 	String userName = "defaultUserName";
@@ -27,5 +34,19 @@ public class SingletonSessionBean implements SingletonRemote {
 	public String getUserName() {
 		return userName;
 	}
+	
+    @Resource
+    TimerService timerService;
+
+    @Timeout
+    public void programmaticTimeout(Timer timer) {
+       System.out.println("programmatic timer");
+    }
+    
+	@Schedule(hour ="*" , minute ="*" ,second="*/5" ) 
+	public void automaticTimer() {
+		System.out.println("automatic timer");
+	}
+	
 
 }

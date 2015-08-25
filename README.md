@@ -6,17 +6,40 @@ the project now contains following Hello World Examples:
 1-SOAP Web Service (Annotation based with : @WebService)
 2-RESTFULL Web Service
 3-WebSocket 
-
-/* JSP/Servlet Hello World Guide */
+***************************************************************
+1-JSF  Hello World
+URL : http://localhost:7001/test/faces/hello.xhtml
+related java classes : 
+	-com.arnia.web.jsf.bean;
+related xhtml files : 
+	-faces/hello.xhtml
+	-faces/welcome.xhtml
+related Config : 
+see below section in web.xml :
+	-"<!-- JSF Config - begin -->"
+***************************************************************
+2-JSP/Servlet Hello World Guide 
 URL : http://localhost:7001/test/jsp/index.jsp
-java classes: 
-com.arnia.web.servlets.DefaultServlet
-com.arnia.web.servlets.DefaultServletWithAnnotation
-Config file : 
-web.xml > go to this section  : <!--  Default Web Servlet - begin -->
+related java classes: 
+	-com.arnia.web.servlets.DefaultServlet
+	-com.arnia.web.servlets.DefaultServletWithAnnotation
+related Config : 
+see below section in web.xml  :
+	-<!--  Default Web Servlet - begin -->
 
-http://localhost:7001/test/jsp/index.jsp
-/* WebSocket Hello World Guide */
+***************************************************************
+3-WebSocket Hello World Guide
 URL :http://localhost:7001/test/websocket/chat.html
-java Class  : com.arnia.web.websocket.ChatServer
+related java Class  :
+	-com.arnia.web.websocket.ChatServer
+	
+***************************************************************
+4- REST/JSON Jerser Web service hello world Guide : 
+URL : localhost:7001/test/rest/helloWorld/yourName
+related java classes : 
+	-com.arnia.web.service.rest.UserRestServices
+related Config  :
+see below section in web.xml  :
+	-<!--  Default Web Servlet - begin -->
+	<!-- REST Config - begin -->
 

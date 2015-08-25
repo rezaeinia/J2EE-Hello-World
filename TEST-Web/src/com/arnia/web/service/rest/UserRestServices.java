@@ -12,16 +12,10 @@ import com.google.gson.Gson;
 
 @Path("")
 public class UserRestServices {
-	@Path("testSleep/{timeInMiliSecond}")
+	@Path("helloWorld/{userName}")
 	@GET
-	public String test(@PathParam("timeInMiliSecond") int time) {
-		try {
-			Thread.sleep(time);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-			return "error";
-		}
-		return "Hi";
+	public String getHelloWorldString(@PathParam("userName") String userName) {
+		return "Hello " + userName;
 	}
 
 	@Path("session/statefull/{string}")
