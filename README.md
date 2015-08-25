@@ -34,7 +34,7 @@ related java Class  :
 	-com.arnia.web.websocket.ChatServer
 	
 ***************************************************************
-4- REST/JSON Jerser Web service hello world Guide : 
+4- REST/JSON Jersey Web service hello world Guide : 
 URL : localhost:7001/test/rest/helloWorld/yourName
 related java classes : 
 	-com.arnia.web.service.rest.UserRestServices
@@ -43,3 +43,11 @@ see below section in web.xml  :
 	-<!--  Default Web Servlet - begin -->
 	<!-- REST Config - begin -->
 
+***************************************************************
+5- SOAP Web service hello world Guide:
+URL :http://localhost:7001/test/SoapHelloWorldImpService?wsdl
+related java classes : 
+	- com.arnia.web.service.soap.SoapHelloWorld
+	- com.arnia.web.service.soap.SoapHelloWorldClient
+	- com.arnia.web.service.soap.SoapHelloWorldImp
+	- com.arnia.web.service.soap.SoapHelloWorldPublisher
